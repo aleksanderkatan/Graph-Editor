@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="menu_button">
+        <item name="android:backgroundTint">@color/teal_200</item>
+        <item name="android:fontFamily">@font/amatic_sc</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="title">
+        <item name="android:fontFamily">@font/amatic_sc</item>
+        <item name="android:textSize">70sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

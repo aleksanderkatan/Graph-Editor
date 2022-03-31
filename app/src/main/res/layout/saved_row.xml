@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_menu_color"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:paddingBottom="10dp"
+                android:text="@string/name"
+                android:textSize="30sp"
+                style="@style/title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.317" />
+
+            <com.example.graph_editor.draw.graph_view.GraphView
+                android:id="@+id/dataGraph"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/main_menu_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:paddingHorizontal="5dp"
+                android:src="@drawable/edit"
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/teal_200"
+                android:contentDescription="@string/edit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="1dp"
+                android:backgroundTint="@color/light_red"
+                android:paddingVertical="11dp"
+                android:contentDescription="@string/delete"
+                android:paddingHorizontal="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/delete"
+                app:layout_constraintBottom_toBottomOf="@+id/btnEdit"
+                app:layout_constraintEnd_toStartOf="@+id/btnShare"
+                app:layout_constraintStart_toEndOf="@+id/btnEdit"
+                app:layout_constraintTop_toBottomOf="@+id/txtName"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageButton
+                android:id="@+id/btnShare"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginStart="1dp"
+                android:backgroundTint="@color/grey"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="11dp"
+                android:contentDescription="@string/shar"
+                android:src="@drawable/share"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/btnEdit"
+                app:layout_constraintEnd_toEndOf="@+id/txtName"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toBottomOf="@+id/txtName"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
